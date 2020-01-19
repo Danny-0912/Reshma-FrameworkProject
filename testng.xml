@@ -3,7 +3,6 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="test_scripts.Test_Script2"/>
       <class name="test_scripts.Test_Login"/>
     </classes>
   </test> <!-- Test -->

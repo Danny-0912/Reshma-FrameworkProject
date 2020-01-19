@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Gmail_LoginPage_Pwd {
-	@FindBy(name="password")
+	@FindBy(name="password111")
 	private WebElement Pwdtbox;
 	
 	@FindBy(xpath="//div[@id='passwordNext']")
