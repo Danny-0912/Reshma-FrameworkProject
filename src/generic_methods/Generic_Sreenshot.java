@@ -10,7 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class Generic_Sreenshot implements Framework_constants{
-	public static void getPhoto(WebDriver driver,String tcname)
+	public static String getPhoto(WebDriver driver,String tcname)
 	{
 		Date d=new Date();
 		String d1=d.toString();
@@ -18,12 +18,14 @@ public class Generic_Sreenshot implements Framework_constants{
 		TakesScreenshot ts=(TakesScreenshot) driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
 		File dest=new File(PHOTOS+date+tcname+".jpeg");
+		String path=dest.getAbsolutePath();
 		try {
 			FileUtils.copyFile(src, dest);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return path;
 	}
 	
 	
